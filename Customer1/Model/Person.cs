@@ -33,12 +33,9 @@ namespace Customer.Model
 
             stringBuilder.AppendLine("Addresses:");
 
-            if (Addresses != null)
+            foreach (var address in Addresses)
             {
-                foreach (Address address in Addresses)
-                {
-                    stringBuilder.Append(address.ToString());
-                }
+                stringBuilder.Append(address.ToString());
             }
 
             return stringBuilder.ToString();
